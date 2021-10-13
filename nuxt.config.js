@@ -2,7 +2,7 @@ export default {
   server: {
     host: '0.0.0.0',
   },
-  // Global page headers: https://go.nuxtjs.dev/config-head
+
   head: {
     title: 'movie-app',
     htmlAttrs: {
@@ -17,32 +17,39 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
+    'nuxt-build-optimisations',
+    '@nuxt/image',
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-  ],
+  modules: ['@nuxtjs/axios', '@nuxt/image'],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  tailwindcss: {
+    mode: 'jit',
+  },
+
+  // image: {
+  //   domains: [BASE_URL],
+  //   alias: {
+  //     Storage: BASE_URL + '/images/?image=',
+  //   },
+  // },
+
+  stylelint: {
+    configFile: 'stylelint.config.js',
+    fix: true,
+  },
+
   build: {},
 }
