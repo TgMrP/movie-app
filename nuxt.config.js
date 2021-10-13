@@ -1,7 +1,5 @@
 export default {
-  server: {
-    host: '0.0.0.0',
-  },
+  target: 'server',
 
   head: {
     title: 'movie-app',
