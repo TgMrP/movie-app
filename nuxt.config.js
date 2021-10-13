@@ -21,40 +21,14 @@ export default {
 
   components: true,
 
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module',
-    '@nuxtjs/tailwindcss',
-    'nuxt-build-optimisations',
-    '@nuxt/image',
-    '@nuxtjs/google-fonts',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
 
-  modules: ['@nuxtjs/axios', '@nuxt/image'],
+  modules: ['@nuxtjs/axios'],
 
   axios: {},
 
-  tailwindcss: {
-    mode: 'jit',
-  },
-
-  googleFonts: {
-    families: {
-      Karla: {
-        wght: [200, 300, 400, 500, 600],
-      },
-    },
-  },
-
-  // image: {
-  //   domains: [BASE_URL],
-  //   alias: {
-  //     Storage: BASE_URL + '/images/?image=',
-  //   },
-  // },
-
   stylelint: {
-    configFile: 'stylelint.config.js',
+    configFile: './stylelint.config.js',
     fix: true,
   },
 
