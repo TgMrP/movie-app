@@ -29,6 +29,7 @@ export default {
     '@nuxtjs/tailwindcss',
     'nuxt-build-optimisations',
     '@nuxt/image',
+    '@nuxtjs/google-fonts',
   ],
 
   modules: ['@nuxtjs/axios', '@nuxt/image'],
@@ -37,6 +38,14 @@ export default {
 
   tailwindcss: {
     mode: 'jit',
+  },
+
+  googleFonts: {
+    families: {
+      Karla: {
+        wght: [200, 300, 400, 500, 600],
+      },
+    },
   },
 
   // image: {
